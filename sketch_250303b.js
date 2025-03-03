@@ -11,6 +11,9 @@ let feed = 0.041;
 let k = 0.065;
 let preset = "spots";
 
+//---------------------------
+//Implementación del modelo
+//---------------------------
 
 // Inicializa la cuadrícula según el preset
 function initializeGrid(preset) {
@@ -103,6 +106,11 @@ function drawInner() {
   swap();
 }
 
+//----------------------------------
+//Iluminación
+//-----------------------------------
+
+
 function phongIllumination() {
   
   let dx = 300; 
@@ -151,8 +159,6 @@ function draw() {
 
   phongIllumination();
 
-  // Setting the background 
-  // to black 
   background(0); 
   
   push(); 
@@ -197,6 +203,11 @@ function swap() {
   grid = next;
   next = temp;
 }
+
+//----------------------------------
+//Modelo del "tigre"
+//----------------------------------
+
 
 function createTiger(){
   noStroke();
